@@ -1,0 +1,13 @@
+<h4>Agregar personaje</h4>
+    <form class="row" (ngSubmit)="emitCharacter()">
+      <!--Ejemplo de como ligar la propiedad con el campo value del input-->
+      <!--<input type="text" [value]="character.name"  class="form-control mb-2" name="Nombre">-->
+      <!--Ejemplo de como crear un 2 way binding, entre el html y el componente de Angular-->
+      <input type="text" [(ngModel)]="character.name"  class="form-control mb-2" name="Nombre" placeholder="Name">
+      <input type="number" [(ngModel)]="character.power" class="form-control mb-2" name="Poder">
+
+      <!--Ejemplo que muestra como llamar a un evento desde el clck del button, es mejor usar desde la forma-->
+      <!--<button class="btn btn-primary" type="submit" (click)="emitCharacter()">Agregar</button>-->
+      <button class="btn btn-primary" type="submit">Agregar</button>
+      <!--<pre>{{character | json}}</pre>-->
+    </form>

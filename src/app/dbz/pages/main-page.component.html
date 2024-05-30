@@ -1,0 +1,13 @@
+<h1>DBz Personajes</h1>
+
+<div class="row">
+  <div class="col">
+    <!-- [charcterList]="characters" sobrescribe la lista default-->
+    <app-dbz-list (deleteCharacter)="onDeleteCharacter($event)" [charcterList]="characters"></app-dbz-list>
+  </div>
+
+  <div class="col">
+    <!--(onNewCharacter) es el evento que se ejecuta, y llama al onNewCharacter del main page -->
+    <app-add-dbz-character (onNewCharacter)="OnNewCharacter($event)"></app-add-dbz-character>
+  </div>
+</div>
